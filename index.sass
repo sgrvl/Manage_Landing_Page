@@ -1,0 +1,293 @@
+*
+	font-size: 16px
+	box-sizing: border-box
+
+$dark-blue: hsl(228, 39%, 23%)
+$darker-blue: hsl(233, 12%, 13%)
+$gray: hsl(227, 12%, 61%)
+$light-gray: hsl(0, 0%, 98%)
+$orange: hsl(12, 88%, 59%)
+
+p 
+	color: $gray
+	font-size: 0.95rem
+	line-height: 1.65
+
+h1, h2, h3, h4 
+	color: $dark-blue
+
+h2
+	font-size: 2rem
+
+.container
+	padding: 1rem
+	width: 100vw
+	max-width: 100%
+	height: 100vh
+	max-height: 100%
+	overflow-x: hidden
+
+.bg-1
+	position: relative
+	top: -45%
+	right: 40%
+
+	img 
+		position: absolute
+		transform: scale(0.6)
+		z-index: -999
+
+.bg-2
+	position: relative
+	top: -60%
+	right: 15%
+
+	img 
+		position: absolute
+		transform: scale(0.35)
+		z-index: -999
+
+.nav-container
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	padding: 1.5rem 0
+	
+	.logo
+		height: auto
+		width: 35%
+		align-self: center
+		padding-bottom: 0.5rem
+	ul
+		align-self: center
+		list-style: none
+		padding: 0
+		display: flex
+
+		li
+			display: none
+
+.nth-container 
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+
+.first-container
+	img 
+		width: 100%
+		height: auto
+	
+	h1
+		font-size: 2.5rem
+		margin: 0
+
+	p 
+		padding: 0.75rem
+		font-size: 1.05rem	
+	
+.getStarted
+	text-decoration: none
+	padding: .75rem 2rem
+	border-radius: 30px
+	box-shadow: 0 7px 12px transparentize(darken($orange, 20%), 0.6) 
+	font-size: 0.9rem
+	color: white
+	background-color: $orange
+
+.second-container
+	margin-top: 5rem
+
+	h2
+		padding: 0 0.75rem
+
+	.head-p
+		margin:
+			top: 0
+			bottom: 3rem
+		padding: 0 0.75rem
+		text-align: center
+
+	p 
+		text-align: justify
+		margin-bottom: 2rem
+
+	.bullet
+		display: flex
+		align-items: center
+		position: relative
+
+		h3
+			margin: 0
+			padding-left: 0.5rem
+			text-align: left
+
+		span 
+			color: white
+			background-color: $orange
+			padding: .6rem 1.5rem
+			border-radius: 30px
+
+		.bullet-bg
+			position: absolute
+			height: 100%
+			width: 150%
+			margin-left: 3rem
+			z-index: -1
+			background-color: transparentize($orange, 0.9)
+
+.third-container
+	overflow: hidden
+	padding-bottom: 4rem	
+	h2
+		margin: 5rem 0
+
+.cards-container
+	display: flex
+	width: 100vw
+	padding: 0
+	overflow: scroll
+	scroll-behavior: smooth
+	box-sizing: content-box
+	padding-top: 2rem
+	
+
+.card
+	background-color: $light-gray
+	min-width: 98vw
+	margin: 0.5rem
+
+.inner-card
+	transform: translateY(-36px)
+	padding: 0 1.5rem
+	img 		
+		height: 72px
+		width: 72px
+
+.slider
+	display: flex
+	justify-content: center
+	align-items: center
+	margin:
+		bottom: 3rem
+		top: 1.5rem
+		
+.card-bullet
+	height: 7px
+	width: 7px
+	border: 1px solid $orange	
+	border-radius: 10px
+	margin: 2px
+
+.bullet-select
+	background-color: transparent
+	background-color: $orange
+
+.fourth-container 
+	height: 50vh
+	width: 100vw
+	margin-left: -1rem
+	background-color: $orange
+	background-image: url(images/bg-simplify-section-mobile.svg)
+	background-repeat: no-repeat
+	background-position: left center
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: 2rem
+
+	h2
+		color: white
+		font-size: 2.5rem
+		text-align: center
+	
+	.getStarted
+		color: $orange
+		font-weight: bolder
+		background-color: white
+
+footer
+	min-height: 55vh
+	background-color: $darker-blue
+	margin: -1rem
+	padding-top: 1rem
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	
+	li 
+		list-style: none
+
+	a 
+		text-decoration: none
+		color: white
+		font-size: 0.9rem
+
+	span
+		font-size: 0.75rem
+		color: $gray
+		margin: 2rem
+
+.email
+	display: flex
+	justify-content: center
+	margin: 2.5rem 0
+	width: 100%
+
+	input
+		&[type="email"]
+			padding: 0.75rem 5rem 0.75rem 1rem
+			border-radius: 30px
+			font-size: 0.75rem
+			text-align: left
+			border-style: none
+
+		&[type="submit"]
+			padding: 0.5rem 1rem
+			color: white
+			font-size: 0.75rem
+			font-weight: bolder
+			background-color: $orange
+			border-radius: 30px
+			border-style: none
+			margin-left: 0.75rem
+
+
+
+.footer-links
+	width: 100%
+	display: flex
+	justify-content: center	
+	
+	ul
+		height: 45vw
+		width: 85%
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		padding-left: 0
+		margin-right: -20%
+
+		li
+			padding: 0.45rem
+
+.social
+	width: 100%
+	display: flex
+	justify-content: space-around
+	align-items: center
+	padding-left: 0
+	padding: 0 1.75rem
+	margin-bottom: 1rem
+
+	img
+		transform: scale(1.5)
+
+.footer-logo
+	margin: 2rem
+
+
