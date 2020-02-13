@@ -19,31 +19,33 @@ h1, h2, h3, h4
 h2
 	font-size: 2rem
 
+body
+	overflow-x: hidden
+
 .container
 	padding: 1rem
 	width: 100vw
 	max-width: 100%
-	height: 100vh
-	max-height: 100%
-	overflow-x: hidden
+	height: 100%
+	overflow: hidden
 
 .bg-1
 	position: relative
-	top: -45%
-	right: 40%
+	right: 35%
 
 	img 
 		position: absolute
+		margin-top: -85%
 		transform: scale(0.6)
 		z-index: -999
 
 .bg-2
 	position: relative
-	top: -60%
 	right: 15%
 
 	img 
 		position: absolute
+		margin-top: -120%
 		transform: scale(0.35)
 		z-index: -999
 
@@ -51,8 +53,15 @@ h2
 	width: 100%
 	display: flex
 	justify-content: space-between
-	align-items: flex-start
 	padding: 1.5rem 0
+
+	#menu-icon
+		width: 6%
+		height: 6%
+		object-fit: none
+
+	.getStarted
+		display: none
 	
 	.logo
 		height: auto
@@ -64,6 +73,7 @@ h2
 	position: absolute
 	padding-right: 1rem
 	right: 0
+	object-fit: none
 	display: none
 
 .nav-links
@@ -231,7 +241,6 @@ h2
 .fourth-container 
 	height: 50vh
 	width: 100vw
-	margin-left: -1rem
 	background-color: $orange
 	background-image: url(images/bg-simplify-section-mobile.svg)
 	background-repeat: no-repeat
@@ -333,4 +342,5 @@ footer
 .footer-logo
 	margin: 2rem
 
-
+@media (min-width: 960px)
+	@import desktop 

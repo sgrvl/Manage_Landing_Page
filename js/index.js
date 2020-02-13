@@ -19,11 +19,19 @@ function mobileMenu(m){
 var bullet = document.getElementsByClassName('card-bullet');
 var card = document.getElementsByClassName('card')[0];
 var container = document.getElementsByClassName('cards-container')[0];
-container.addEventListener('scroll', myScroll);
+
+container.addEventListener('wheel', function(){
+	console.log(container.deltaX);
+});
+
+/* not working */
 
 function myScroll() {
 
-	var pos = container.scrollLeft;
+	
+
+
+	/*var pos = container.scrollLeft;
 
 	for(let i = 0, length1 = bullet.length; i < length1; i++){
 		
@@ -47,7 +55,7 @@ function myScroll() {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[3].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
-	}
+	}*/
 }
 
 
