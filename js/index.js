@@ -20,50 +20,33 @@ var bullet = document.getElementsByClassName('card-bullet');
 var card = document.getElementsByClassName('card')[0];
 var container = document.getElementsByClassName('cards-container')[0];
 
-container.addEventListener('wheel', function(){
-	console.log(container.deltaX);
-});
-
-/* not working */
-
-function myScroll() {
-
-	
-
-
-	/*var pos = container.scrollLeft;
+container.addEventListener('scroll', function(){
+	var pos = container.scrollLeft;
+	var w = window.innerWidth 
+	var s = 8;
+	console.log(pos);
 
 	for(let i = 0, length1 = bullet.length; i < length1; i++){
 		
 
-		if (pos == 8) {
+		if (pos < w) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[0].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos == 392) {
+		if (pos >= w + s*2 && pos < w*2 + s*3 ) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[1].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos == 775) {
+		if (pos < w*3 + s*2 && pos >= w*2 + s*3) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[2].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos == 1151) {
+		if (pos >= w*3 + s*2) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[3].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
-	}*/
-}
-
-
-/*
-
-8 = anisha
-392 = ali
-775 = rich
-1151 = shanai
-
-*/
+	}
+});
