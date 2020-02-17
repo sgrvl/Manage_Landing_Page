@@ -353,22 +353,22 @@ footer {
     opacity: 0.7; }
 
   .bg-1 {
-    position: absolute;
-    top: -10%;
-    left: 60%; }
+    position: relative; }
     .bg-1 img {
       position: absolute;
       transform: scale(1.1);
-      z-index: -999; }
+      z-index: -999;
+      left: 95%;
+      margin-top: -15%; }
 
   .bg-2 {
-    position: absolute;
-    top: 390%;
-    left: -20%; }
+    position: relative; }
     .bg-2 img {
       position: absolute;
       transform: scale(0.85);
-      z-index: -999; }
+      z-index: -999;
+      margin-top: 25%;
+      right: 70%; }
 
   .second-container {
     display: grid;
@@ -422,7 +422,8 @@ footer {
     min-height: initial;
     display: grid;
     grid-template: 1fr 1fr/0.75fr 1fr 1fr;
-    padding: 0 10rem; }
+    padding: 0 10rem;
+    overflow: hidden; }
     footer span {
       grid-area: 2/3/3/4;
       justify-self: flex-end;
