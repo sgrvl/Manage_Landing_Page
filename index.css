@@ -1,5 +1,6 @@
 * {
   font-size: 16px;
+  font-family: "Be Vietnam", sans-serif;
   box-sizing: border-box; }
 
 p {
@@ -230,10 +231,12 @@ body {
     font-weight: bolder;
     background-color: white; }
 
+.footerWrap {
+  width: 100vw; }
+
 footer {
   min-height: 55vh;
   background-color: #1d1e25;
-  margin: -1rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -294,8 +297,8 @@ footer {
   padding-left: 0;
   padding: 0 1.75rem;
   margin-bottom: 1rem; }
-  .social img {
-    transform: scale(1.5); }
+  .social path {
+    fill: white; }
 
 .footer-logo {
   margin: 2rem; }
@@ -305,7 +308,7 @@ footer {
     all: unset; }
 
   .container {
-    padding: 3rem 5rem; }
+    padding: 3rem 10rem; }
 
   .nav-container {
     padding: 0; }
@@ -350,21 +353,21 @@ footer {
     opacity: 0.7; }
 
   .bg-1 {
-    position: relative;
-    top: -15%;
-    right: -65%; }
+    position: absolute;
+    top: -10%;
+    left: 60%; }
     .bg-1 img {
       position: absolute;
-      transform: scale(1);
+      transform: scale(1.1);
       z-index: -999; }
 
   .bg-2 {
-    position: relative;
-    top: 50%;
-    right: 30%; }
+    position: absolute;
+    top: 390%;
+    left: -20%; }
     .bg-2 img {
       position: absolute;
-      transform: scale(1);
+      transform: scale(0.85);
       z-index: -999; }
 
   .second-container {
@@ -375,7 +378,7 @@ footer {
       grid-area: left;
       display: flex;
       flex-direction: column;
-      padding-right: 20rem; }
+      padding-right: 15rem; }
       .second-container .text p {
         text-align: left;
         padding-right: 12rem; }
@@ -386,7 +389,8 @@ footer {
       grid-area: right;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding-left: 3rem; }
     .second-container .bullet-bg {
       display: none; }
 
@@ -414,9 +418,43 @@ footer {
       text-align: left; }
 
   footer {
-    min-height: 100%; }
+    height: 25vh;
+    min-height: initial;
+    display: grid;
+    grid-template: 1fr 1fr/0.75fr 1fr 1fr;
+    padding: 0 10rem; }
+    footer span {
+      grid-area: 2/3/3/4;
+      justify-self: flex-end;
+      margin-right: 0; }
 
-  .footer-links ul {
-    height: 100%; } }
+  footer a:hover {
+    color: #f25f3a; }
+    footer a:hover path {
+      fill: #f25f3a; }
+
+  .footer-links {
+    grid-area: 1/2/3/3;
+    height: 100%; }
+    .footer-links ul {
+      height: 100%;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap; }
+
+  .social {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: -0.5rem; }
+    .social li {
+      padding: 0.5rem; }
+
+  .email {
+    grid-area: 1/3/2/4;
+    justify-content: flex-end; }
+
+  .footer-logo {
+    grid-area: 1/1/2/2;
+    margin: 0; } }
 
 /*# sourceMappingURL=index.css.map */

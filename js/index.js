@@ -25,6 +25,7 @@ container.addEventListener('scroll', function(){
 	var w = window.innerWidth 
 	var s = 8;
 	console.log(pos);
+	console.log(w + 'w');
 
 	for(let i = 0, length1 = bullet.length; i < length1; i++){
 		
@@ -34,17 +35,17 @@ container.addEventListener('scroll', function(){
 			bullet[0].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos >= w + s*2 && pos < w*2 + s*3 ) {
+		if (pos >= w && pos < w*2) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[1].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos < w*3 + s*2 && pos >= w*2 + s*3) {
+		if (pos < w*2.5 && pos >= w*2) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[2].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
 
-		if (pos >= w*3 + s*2) {
+		if (pos >= w*2.9) {
 			bullet[i].style.backgroundColor = 'hsla(12, 88%, 59%, 0)';
 			bullet[3].style.backgroundColor = 'hsl(12, 88%, 59%)';
 		}
