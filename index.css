@@ -454,6 +454,8 @@ footer {
   .email {
     grid-area: 1/3/2/4;
     justify-content: flex-end; }
+    .email input[type=submit] {
+      cursor: pointer; }
 
   .footer-logo {
     grid-area: 1/1/2/2;
